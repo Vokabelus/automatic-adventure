@@ -21,9 +21,7 @@ HEADERS += \
 
 VERSION = 1.0
 
-
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-
 #OpenCV
 win32: {
     INCLUDEPATH += "E:\\coding\\opencv\\build\\include"
