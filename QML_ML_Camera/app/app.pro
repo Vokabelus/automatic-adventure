@@ -21,9 +21,7 @@ HEADERS += \
 
 VERSION = 1.0
 
-
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-
 #OpenCV
 win32: {
     INCLUDEPATH += "E:\\coding\\opencv\\build\\include"
@@ -50,12 +48,7 @@ unix:!macx:{
 }
 
 
-
-
-
-
 #logger-corea and camera-core set up
-
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../camera-core/release/ -lcamera-core
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../camera-core/debug/ -lcamera-core
