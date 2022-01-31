@@ -18,28 +18,33 @@ Page{
     property alias toolbarButtons: buttonsLoader.sourceComponent
     property alias toolbarTitle: titleLabel.text
 
-footer: RoundButton{
-        id: homeButton
-        width: 70
-        height: 70
-        //x: parent.width/2.2
+    footer:Item {
+        id: appFooter
 
-        anchors.bottom: parent.bottom
-        Layout.alignment: Qt.AlignBottom| Qt.AlignCenter
-        Layout.preferredHeight:  70
-        Layout.preferredWidth:   70
-        icon.source:"qrc:/images/png/home_button.png"
-        icon.width :Style.roundButtonWidth
-        icon.height:Style.roundButtonHeight
-        background: Rectangle {
-            radius: Style.roundButtonRadius
-            color: Style.roundButtonHome
+        RoundButton{
+            id: homeButton
+            x: parent.width/2
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            Layout.alignment: Qt.AlignBottom| Qt.AlignCenter
+            Layout.preferredHeight:  Style.roundButtonHeight
+            Layout.preferredWidth:   Style.roundButtonWidth
+            icon.source:"qrc:/images/png/home_button.png"
+            icon.width :Style.roundButtonWidth
+            icon.height:Style.roundButtonHeight
+            background: Rectangle {
+                radius: Style.roundButtonRadius
+                color: Style.roundButtonHome
+            }
+
+            onClicked: {
+                pageStack.push("qrc:/MainPage.qml")
+            }
         }
-
-        onClicked: {
-            pageStack.push("qrc:/MainPage.qml")
-      }
     }
+
+
+
 
     header: ToolBarTheme{
         id: toolBarTheme
@@ -104,9 +109,3 @@ footer: RoundButton{
 
 
 
-
-
-/*##^## Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
- ##^##*/

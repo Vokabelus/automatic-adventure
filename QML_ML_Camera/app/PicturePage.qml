@@ -13,8 +13,8 @@ PageTheme {
     toolbarButtons: ColumnLayout {
         RoundButton{
             id: renameAlbum
-//            text: qsTr("RENAME")
-//            font.pointSize: 18
+            //            text: qsTr("RENAME")
+            //            font.pointSize: 18
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             Layout.preferredHeight:  Style.roundButtonHeight
             Layout.preferredWidth:   Style.roundButtonWidth
@@ -62,42 +62,42 @@ PageTheme {
         currentIndex: pictureIndex
 
 
-    Component.onCompleted: {
-        positionViewAtIndex(currentIndex,ListView.SnapPosition)
+        Component.onCompleted: {
+            positionViewAtIndex(currentIndex,ListView.SnapPosition)
 
-
-    }
-    onMovementEnded: {
-        currentIndex = itemAt(contentX, contentY).itemIndex
-    }
-
-    onCurrentItemChanged: {
-        toolbarTitle = currentItem.itemName
-        pictureName  = currentItem.itemName
-    }
-
-
-    delegate: Rectangle {
-        property int itemIndex: index
-        property string itemName: name
-
-        // delegate is instanciated first so listview has no dimension,
-        // causing positionViewAtIndex to fail...
-        width: ListView.view.width === 0 ? parent.width : ListView.view.width
-        height: pictureListView.height
-        color: "transparent"
-
-        Image {
-            fillMode: Image.PreserveAspectFit
-            cache: false
-            width: parent.width
-            height: parent.height
-            source: "image://pictures/" + index + "/full"
 
         }
-    }
+        onMovementEnded: {
+            currentIndex = itemAt(contentX, contentY).itemIndex
+        }
 
-}
+        onCurrentItemChanged: {
+            toolbarTitle = currentItem.itemName
+            pictureName  = currentItem.itemName
+        }
+
+
+        delegate: Rectangle {
+            property int itemIndex: index
+            property string itemName: name
+
+            // delegate is instanciated first so listview has no dimension,
+            // causing positionViewAtIndex to fail...
+            width: ListView.view.width === 0 ? parent.width : ListView.view.width
+            height: pictureListView.height
+            color: "transparent"
+
+            Image {
+                fillMode: Image.PreserveAspectFit
+                cache: false
+                width: parent.width
+                height: parent.height
+                source: "image://pictures/" + index + "/full"
+
+            }
+        }
+
+    }
 
     InputDialog {
 

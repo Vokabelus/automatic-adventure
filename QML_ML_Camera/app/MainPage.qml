@@ -16,8 +16,6 @@ PageTheme {
         id: drawerOpen
         Layout.preferredHeight:  Style.roundButtonHeight
         Layout.preferredWidth:   Style.roundButtonWidth
-        //text: qsTr("::")
-        //font.pointSize: 18
         Layout.alignment: Qt.AlignRight| Qt.AlignTop
         icon.source:"qrc:/images/png/cogwheel.png"
         icon.width :Style.roundButtonWidth
@@ -57,37 +55,33 @@ PageTheme {
                 radius: Style.roundButtonRadius
                 color: Style.roundButtonGreen
             }
-
-            //font.pointSize: 18
-            //anchors.right: quit.left
-            //rightPadding: 5
             onClicked: {
                 pageStack.push("qrc:/AlbumListPage.qml")
             }
 
         }
-//        RoundButton {
-//            id:movieAlbumButton
-//            Layout.preferredHeight:  65
-//            Layout.preferredWidth:   65
-//            smooth: true
-//            antialiasing: true
-//            //text: qsTr("ALBUM")
-//            Layout.alignment: Qt.AlignLeft | Qt.AnchorTop
-//            background: Image {
-//                source: "qrc:/images/png/movie_gallery.png"
-//                width: 65
-//                height: 65
-//            }
+        //        RoundButton {
+        //            id:movieAlbumButton
+        //            Layout.preferredHeight:  65
+        //            Layout.preferredWidth:   65
+        //            smooth: true
+        //            antialiasing: true
+        //            //text: qsTr("ALBUM")
+        //            Layout.alignment: Qt.AlignLeft | Qt.AnchorTop
+        //            background: Image {
+        //                source: "qrc:/images/png/movie_gallery.png"
+        //                width: 65
+        //                height: 65
+        //            }
 
-//            //font.pointSize: 18
-//            //anchors.right: quit.left
-//            //rightPadding: 5
-//            onClicked: {
-//                pageStack.push("qrc:/MovieAlbumListPage.qml")
-//            }
-//
-//        }
+        //            //font.pointSize: 18
+        //            //anchors.right: quit.left
+        //            //rightPadding: 5
+        //            onClicked: {
+        //                pageStack.push("qrc:/MovieAlbumListPage.qml")
+        //            }
+        //
+        //        }
         RoundButton {
             id: cameraPage
             Layout.preferredHeight:  Style.roundButtonHeight

@@ -49,12 +49,12 @@ PageTheme {
         TableViewColumn {
             role: "time"
             title: "Time"
-             width: 160
+            width: 160
         }
         TableViewColumn {
             role: "type"
             title: "Type"
-             width: 150
+            width: 150
         }
         TableViewColumn {
             role: "message"

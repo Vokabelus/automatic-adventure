@@ -34,8 +34,8 @@ PageTheme {
 
         RoundButton{
             id: renameAlbum
-//            text: qsTr("RENAME")
-//            font.pointSize: 18
+            //            text: qsTr("RENAME")
+            //            font.pointSize: 18
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
             Layout.preferredHeight:  Style.roundButtonHeight
             Layout.preferredWidth:   Style.roundButtonWidth
@@ -49,7 +49,7 @@ PageTheme {
             }
             onClicked: {
                 renameAlbumDialog.open()
-                     }
+            }
         }
         RoundButton {
             id: removeAlbum
@@ -93,8 +93,8 @@ PageTheme {
         //folder: shortcuts.pictures
         onAccepted: {
             var pictureUrl = dialog.fileUrl
-//            var id = pictureModel.getAlbumId()
-//            console.log("albumId",id)
+            //            var id = pictureModel.getAlbumId()
+            //            console.log("albumId",id)
             pictureModel.addPictureFromUrl(pictureUrl)
             dialog.close()
         }

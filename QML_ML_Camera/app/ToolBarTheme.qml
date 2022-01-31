@@ -5,10 +5,10 @@ import QtQuick.Layouts 1.2
 import "."
 
 ToolBar {
-        id:toolBar
-        background: Rectangle{
-            color: Style.toolBackground
-        }
-
-
+    id:toolBar
+    background: Rectangle{
+        color: Style.toolBackground
     }
+
+
+}

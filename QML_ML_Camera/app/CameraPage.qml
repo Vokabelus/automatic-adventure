@@ -65,70 +65,70 @@ PageTheme {
     }
     toolbarButtons: ColumnLayout {
 
-    RoundButton
-    {
-        id: savePicture
+        RoundButton
+        {
+            id: savePicture
 
-        Layout.alignment: Qt.AlignRight | Qt.AlignTop
-        Layout.preferredHeight:  Style.roundButtonHeight
-        Layout.preferredWidth:   Style.roundButtonWidth
-        icon.source:"qrc:/images/png/save_photo.png"
-        icon.width :Style.roundButtonWidth -15
-        icon.height:Style.roundButtonHeight
-        background: Rectangle {
-            radius: Style.roundButtonRadius
-            color: Style.roundButtonGreen
+            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            Layout.preferredHeight:  Style.roundButtonHeight
+            Layout.preferredWidth:   Style.roundButtonWidth
+            icon.source:"qrc:/images/png/save_photo.png"
+            icon.width :Style.roundButtonWidth -15
+            icon.height:Style.roundButtonHeight
+            background: Rectangle {
+                radius: Style.roundButtonRadius
+                color: Style.roundButtonGreen
+            }
+
+
+            onClicked: {
+                cameraProcessor.captureImage()
+                //            var url = cameraProcessor.getURL()
+                //            console.log("albumm url", url)
+            }
+
         }
+        // Recording will be added later!!!!!
+
+        //    RoundButton
+        //    {
+        //        id: recordMovie
+        //        Layout.alignment: Qt.AlignRight | Qt.AlignTop
+        //        Layout.preferredHeight:  65
+        //        Layout.preferredWidth:   65
+        //        background: Image {
+        //            source: "qrc:/images/png/record.png"
+        //            width: 65
+        //            height: 65
+        //            smooth: true
+        //        }
 
 
-        onClicked: {
-            cameraProcessor.captureImage()
-//            var url = cameraProcessor.getURL()
-//            console.log("albumm url", url)
-        }
+        //        onClicked: {
+        //            console.log("Record")
+        //            //cameraProcessor.recordMovie()
+        //        }
 
-    }
-    // Recording will be added later!!!!!
-
-//    RoundButton
-//    {
-//        id: recordMovie
-//        Layout.alignment: Qt.AlignRight | Qt.AlignTop
-//        Layout.preferredHeight:  65
-//        Layout.preferredWidth:   65
-//        background: Image {
-//            source: "qrc:/images/png/record.png"
-//            width: 65
-//            height: 65
-//            smooth: true
-//        }
+        //    }
+        //    RoundButton
+        //    {
+        //        id: stopRecording
+        //        Layout.alignment: Qt.AlignRight | Qt.AlignTop
+        //        Layout.preferredHeight:  65
+        //        Layout.preferredWidth:   65
+        //        background: Image {
+        //            source: "qrc:/images/png/stop_recording.png"
+        //            width: 65
+        //            height: 65
+        //            smooth: true
+        //        }
 
 
-//        onClicked: {
-//            console.log("Record")
-//            //cameraProcessor.recordMovie()
-//        }
+        //        onClicked: {
+        //            console.log("stop recording")
+        //            cameraProcessor.stopRecording()
+        //        }
 
-//    }
-//    RoundButton
-//    {
-//        id: stopRecording
-//        Layout.alignment: Qt.AlignRight | Qt.AlignTop
-//        Layout.preferredHeight:  65
-//        Layout.preferredWidth:   65
-//        background: Image {
-//            source: "qrc:/images/png/stop_recording.png"
-//            width: 65
-//            height: 65
-//            smooth: true
-//        }
-
-
-//        onClicked: {
-//            console.log("stop recording")
-//            cameraProcessor.stopRecording()
-//        }
-
-//    }
+        //    }
     }
 }
