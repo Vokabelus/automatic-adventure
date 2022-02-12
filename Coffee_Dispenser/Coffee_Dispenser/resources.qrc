@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>app/BootMenu.qml</file>
+        <file>app/CoffeeBrewing.qml</file>
+        <file>app/CoffeeTuning.qml</file>
+        <file>app/main.qml</file>
+        <file>app/MainMenu.qml</file>
+        <file>app/MyStyle.qml</file>
+        <file>app/PageTheme.qml</file>
+        <file>app/StatusBar.qml</file>
+        <file>app/UserMenu.qml</file>
+        <file>icons/black_coffee.png</file>
+        <file>icons/black_tea.png</file>
+        <file>icons/cappuccino.png</file>
+        <file>icons/chocolate.png</file>
+        <file>icons/espresso.png</file>
+        <file>icons/green_tea.png</file>
+        <file>icons/soup.png</file>
+        <file>icons/water.png</file>
+    </qresource>
+</RCC>
