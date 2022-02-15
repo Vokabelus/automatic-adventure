@@ -2,4 +2,4 @@
 QML-Camera
 project for Jatson Nano
 
-QML- Coffe Dispenser project
+QML- Coffee Dispenser project
