@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
 import coffee.style 1.0
+import CoffeeDispenser 1.0
 
 ApplicationWindow  {
 
@@ -15,6 +16,10 @@ ApplicationWindow  {
     visible: true
     title: qsTr("Coffee Dispenser")
     color: MyStyle.windowBackground
+
+    SystemController {
+            id: systemController
+        }
 
     StackView {
          id: stackView

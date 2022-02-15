@@ -2,7 +2,8 @@ import QtQuick 2.15
 import QtQuick.Layouts 2.15
 import QtQuick.Controls 2.15
 
-// singleton type in use
+
+
 
 PageTheme {
     id:mainPage
@@ -57,8 +58,7 @@ PageTheme {
         anchors.rightMargin: 30
         anchors.leftMargin: 60
         columnSpacing: 10
-        //flow: GridLayout.LeftToRight
-        anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         Repeater{
             model: CoffeeModelList {}
@@ -68,7 +68,12 @@ PageTheme {
                 property int visualIndex:  index
                 property string iconName:  name
 
-                onClicked: { console.log("Button name: " + iconName ) }
+                onClicked: { console.log("Button name: " + iconName )
+                            systemController.setDrinkType(iconName)
+                            systemController.setDrinkIconType(iconSource)
+                            stackView.push("CoffeeTuning.qml")
+                }
+
                 Rectangle{
                     id:drinksRect
                     width:  100

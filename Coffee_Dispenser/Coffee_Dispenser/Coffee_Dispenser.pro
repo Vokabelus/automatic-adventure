@@ -1,6 +1,7 @@
 QT += quick
 
 SOURCES += \
+        controller/systemcontroller.cpp \
         main.cpp
 
 resources.files = app/main.qml
@@ -39,3 +40,6 @@ DISTFILES += \
     icons/green_tea.png \
     icons/soup.png \
     icons/water.png
+
+HEADERS += \
+    controller/systemcontroller.h

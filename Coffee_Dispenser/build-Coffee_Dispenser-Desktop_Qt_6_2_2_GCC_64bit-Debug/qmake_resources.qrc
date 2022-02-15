@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/Coffee_Dispenser">
+<file alias="app/main.qml">/home/gwamoniak/Programming/projects/Qt-projects/automatic-adventure/Coffee_Dispenser/Coffee_Dispenser/app/main.qml</file>
+</qresource>
+</RCC>
