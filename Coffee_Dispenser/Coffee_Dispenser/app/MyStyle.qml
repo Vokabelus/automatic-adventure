@@ -5,6 +5,7 @@ QtObject{
     property string fontName : "sans-serif";
 
     property color textColor: "#fffafa"
+    property int textSize: 25
 
     //colors
         property color windowBackground:  "#473128"

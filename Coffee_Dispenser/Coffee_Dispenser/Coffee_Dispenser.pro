@@ -23,6 +23,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     app/BootMenu.qml \
     app/CoffeeBrewing.qml \
+    app/CoffeeModelList.qml \
     app/CoffeeTuning.qml \
     app/MainMenu.qml \
     app/MyStyle.qml \

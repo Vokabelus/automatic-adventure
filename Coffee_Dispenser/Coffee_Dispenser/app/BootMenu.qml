@@ -11,30 +11,29 @@ PageTheme {
 
     Timer {
         id: bootTimer
-        interval: 1000
+        interval: 2000
         repeat: false
         running: false
-        triggeredOnStart: true
+        triggeredOnStart: false
         onTriggered: {
             pageStack.push("qrc:/app/MainMenu.qml")
         }
     }
 
-    Rectangle {
-        id: bootRect
-        anchors.top: parent.top
-        width: 50
-        height: 50
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                bootTimer.start();
+        Text {
+            id: bootingText
+            text: qsTr("Booting please wait ...")
+            font.pointSize: 24
+            color: MyStyle.textColor
+            anchors{
+                verticalCenter: parent.verticalCenter
+                horizontalCenter: parent.horizontalCenter
             }
-
         }
 
 
-    }
+
+    Component.onCompleted: bootTimer.start()
 
 
 

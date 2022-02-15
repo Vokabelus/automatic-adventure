@@ -17,5 +17,8 @@
         <file>icons/green_tea.png</file>
         <file>icons/soup.png</file>
         <file>icons/water.png</file>
+        <file>icons/wifi.png</file>
+        <file>icons/settings.png</file>
+        <file>app/CoffeeModelList.qml</file>
     </qresource>
 </RCC>
