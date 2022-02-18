@@ -14,7 +14,6 @@ PageTheme {
             horizontalCenter: parent.horizontalCenter
 
         }
-
     }
 
     Rectangle{
@@ -49,19 +48,47 @@ PageTheme {
 
     Rectangle{
         id:settingsRect
+        x: 301
         anchors{
             right: parent.right
             top: statusBarTunningPage.bottom
             leftMargin: 15
-            rightMargin: 15
+            rightMargin: 19
             bottomMargin: 15
             topMargin: 15
+        }
+
+        Slider {
+            id: slider
+            x: 80
+            y: 55
+            value: 0.5
+        }
+
+        Slider {
+            id: slider1
+            x: 80
+            y: 99
+            value: 0.5
+        }
+
+        Slider {
+            id: slider2
+            x: 80
+            y: 146
+            value: 0.5
+        }
+
+        ComboBox {
+            id: comboBox
+            x: 80
+            y: 209
+            width: 160
+            height: 24
         }
         height: parent.height - 150
         width: parent.width/2
         color: "black"
 
     }
-
-
 }

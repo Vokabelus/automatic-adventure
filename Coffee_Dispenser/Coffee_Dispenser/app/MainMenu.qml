@@ -15,7 +15,6 @@ PageTheme {
             horizontalCenter: parent.horizontalCenter
 
         }
-
     }
 
     RoundButton{
@@ -43,8 +42,6 @@ PageTheme {
             }
         }
     }
-
-
 
 
 
