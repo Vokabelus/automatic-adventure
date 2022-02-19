@@ -20,5 +20,13 @@
         <file>icons/wifi.png</file>
         <file>icons/settings.png</file>
         <file>app/CoffeeModelList.qml</file>
+        <file>app/MySlider.qml</file>
+        <file>icons/coffee-beans.png</file>
+        <file>icons/milk.png</file>
+        <file>icons/sugar_cube.png</file>
+        <file>icons/start_button.png</file>
+        <file>icons/stop_button.png</file>
+        <file>icons/back_button.png</file>
+        <file>icons/home_button.png</file>
     </qresource>
 </RCC>

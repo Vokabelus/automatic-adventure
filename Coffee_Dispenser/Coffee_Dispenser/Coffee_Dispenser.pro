@@ -27,6 +27,7 @@ DISTFILES += \
     app/CoffeeModelList.qml \
     app/CoffeeTuning.qml \
     app/MainMenu.qml \
+    app/MySlider.qml \
     app/MyStyle.qml \
     app/PageTheme.qml \
     app/StatusBar.qml \
