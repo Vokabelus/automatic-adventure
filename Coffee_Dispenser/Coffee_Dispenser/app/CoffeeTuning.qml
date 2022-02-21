@@ -137,7 +137,10 @@ PageTheme {
                     height: 60
                     width: 250
                     radius: 60
-                    onClicked: startButtonRect.color = "green"
+                    onClicked: {
+                       startButtonRect.color = "green"
+                       pageStack.push("qrc:/app/CoffeeBrewing.qml")
+                    }
                     Rectangle{
                         id:startButtonRect
                         width: parent.width
