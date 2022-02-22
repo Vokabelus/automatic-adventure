@@ -1,6 +1,7 @@
 QT += quick
 
 SOURCES += \
+        controller/systemcontroller.cpp \
         main.cpp
 
 resources.files = app/main.qml
@@ -23,8 +24,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     app/BootMenu.qml \
     app/CoffeeBrewing.qml \
+    app/CoffeeModelList.qml \
     app/CoffeeTuning.qml \
     app/MainMenu.qml \
+    app/MySlider.qml \
     app/MyStyle.qml \
     app/PageTheme.qml \
     app/StatusBar.qml \
@@ -38,3 +41,6 @@ DISTFILES += \
     icons/green_tea.png \
     icons/soup.png \
     icons/water.png
+
+HEADERS += \
+    controller/systemcontroller.h
