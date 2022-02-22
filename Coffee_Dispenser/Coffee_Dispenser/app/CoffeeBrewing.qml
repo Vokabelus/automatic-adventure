@@ -69,14 +69,23 @@ PageTheme {
             //color: MyStyle.accentBackground
         }
 
-        Row{
+    }
+
+    Rectangle{
+        id:navigationButtonsRectBrew
+        width: parent.width/2
+        anchors.top: settingsRectBrew.bottom
+        anchors.right: settingsRectBrew.right
+        anchors.topMargin: 5
+        RowLayout{
             id:navigationButtonsBrew
-            anchors.bottom: parent.bottom
+            Layout.fillWidth: true
+            Layout.preferredWidth: parent.width
             width: parent.width
             RoundButton{
                 id:startButton
-                height: 60
-                width: 250
+                Layout.preferredWidth: 250
+                Layout.preferredHeight: 60
                 radius: 60
                 onClicked: {
                     startButtonRect.color = "red"
@@ -101,10 +110,9 @@ PageTheme {
             }
             RoundButton{
                 id:backButton
-                height: 60
-                width: 100
+                Layout.preferredWidth: 100
+                Layout.preferredHeight: 60
                 radius: 30
-                anchors.right: parent.right
                 onClicked: pageStack.push("qrc:/app/CoffeeTuning.qml")
                 Rectangle{
                     id:homeButtonRect
@@ -126,6 +134,7 @@ PageTheme {
             }
         }
     }
+
 }
 
 

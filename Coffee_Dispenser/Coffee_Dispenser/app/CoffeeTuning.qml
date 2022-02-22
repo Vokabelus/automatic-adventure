@@ -60,130 +60,148 @@ PageTheme {
         width: parent.width/2
         color: "black"
 
-        Column{
+        ColumnLayout{
             id: column
             anchors.fill: parent
-            //spacing: 4
-            anchors{
-                leftMargin: 35
-                topMargin: 40
-            }
-            Row{
+            layoutDirection: Qt.LeftToRight
+            spacing: 0
+            anchors.leftMargin: 30
+            anchors.topMargin: 25
+            Layout.alignment:Qt.AlignVCenter & Qt.AlignHCenter
+            RowLayout{
                 id: coffeeSelection
-                anchors.top: parent.top
-                anchors.topMargin: 30
-                MySlider {
+                Layout.row : 1
+              MySlider {
                     id: sliderCoffee
+                    Layout.alignment:Qt.AlignHCenter
                     from: 0
                     to: 4
                     value: 1
                 }
                 Image {
                     id: coffeBean
-                    width: 35
-                    height: 35
-                    anchors.left: sliderCoffee.right
-                    anchors.leftMargin: 5
+                    Layout.preferredWidth:35
+                    Layout.preferredHeight: 35
+                    Layout.alignment:Qt.AlignRight
                     source: "qrc:/icons/coffee-beans.png"
                 }
             }
 
 
-            Row{
+            RowLayout{
                 id: milkselection
-                anchors.top: coffeeSelection.bottom
-                anchors.topMargin: 60
+                Layout.row : 2
                 MySlider {
                     id: sliderMilk
+                    //Layout.topMargin: 10
+                    Layout.alignment:Qt.AlignHCenter
                     from: 0
                     to: 4
                     value: 2
                 }
                 Image {
                     id: milk
-                    width: 35
-                    height: 35
-                    anchors.left: sliderCoffee.right
-                    anchors.leftMargin: 15
+                    Layout.preferredWidth:35
+                    Layout.preferredHeight: 35
+                    Layout.alignment:Qt.AlignRight
                     source: "qrc:/icons/milk.png"
                 }
             }
 
-            Row{
+            RowLayout{
                 id: sugarSelection
-                anchors.top: milkselection.bottom
-                anchors.topMargin: 30
+                Layout.row : 3
                 MySlider {
                     id: sliderSugar
+                    //Layout.topMargin: 10
+                    Layout.alignment:Qt.AlignHCenter
                     from: 0
                     to: 4
                     value: 1
                 }
                 Image {
                     id: sugar
-                    width: 35
-                    height: 35
-                    anchors.left: sliderCoffee.right
-                    anchors.leftMargin: 15
+                    Layout.preferredWidth:35
+                    Layout.preferredHeight: 35
+                    Layout.alignment:Qt.AlignRight
                     source: "qrc:/icons/sugar_cube.png"
                 }
             }
-            Row{
-                id:navigationButtons
-                anchors.bottom: parent.bottom
-                width: parent.width
-                RoundButton{
-                    id:startButton
-                    height: 60
-                    width: 250
-                    radius: 60
-                    onClicked: {
-                       startButtonRect.color = "green"
-                       pageStack.push("qrc:/app/CoffeeBrewing.qml")
-                    }
-                    Rectangle{
-                        id:startButtonRect
-                        width: parent.width
-                        height: parent.height
-                        radius: parent.radius
-                        color: MyStyle.accentBackground
-                        Image {
-                            id: startButtonIcon
-                            width: 50
-                            height: 50
-                            anchors.verticalCenter: parent.verticalCenter
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            source: "qrc:/icons/start_button.png"
-                        }
 
-                    }
+        }
+
+    }
+
+    Rectangle{
+           id:navigationButtonsRect
+           width: parent.width/2
+           anchors.top: settingsRect.bottom
+           anchors.right: settingsRect.right
+           anchors.topMargin: 5
+        RowLayout{
+            id:navigationButtons
+            Layout.fillWidth: true
+            Layout.preferredWidth: parent.width
+            width: parent.width
+            RoundButton{
+                id:startButton
+                Layout.preferredWidth: 250
+                Layout.preferredHeight: 60
+                radius:60
+                onClicked: {
+                    startButtonRect.color = "green"
+                    pageStack.push("qrc:/app/CoffeeBrewing.qml")
                 }
-                RoundButton{
-                    id:homeButton
-                    height: 60
-                    width: 100
-                    radius: 30
-                    anchors.right: parent.right
-                    onClicked: pageStack.push("qrc:/app/MainMenu.qml")
-                    Rectangle{
-                        id:homeButtonRect
-                        width: parent.width
-                        height: parent.height
-                        radius: parent.radius
-                        color: MyStyle.accentBackground
-
-                        Image {
-                            id: homeButtonIcon
-                            width: 50
-                            height: 50
-                            anchors.verticalCenter: parent.verticalCenter
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            source: "qrc:/icons/home_button.png"
-                        }
-
+                Rectangle{
+                    id:startButtonRect
+                    width:  parent.width
+                    height: parent.height
+                    radius: startButton.radius
+                    color: MyStyle.accentBackground
+                    Image {
+                        id: startButtonIcon
+                        width: 50
+                        height: 50
+                        anchors.verticalCenter:parent.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        source: "qrc:/icons/start_button.png"
                     }
+
+                }
+            }
+            RoundButton{
+                id:homeButton
+                Layout.preferredWidth: 100
+                Layout.preferredHeight: 60
+                radius: 30
+                onClicked: pageStack.push("qrc:/app/MainMenu.qml")
+                Rectangle{
+                    id:homeButtonRect
+                    width: parent.width
+                    height: parent.height
+                    radius: parent.radius
+                    color: MyStyle.accentBackground
+
+                    Image {
+                        id: homeButtonIcon
+                        width: 50
+                        height: 50
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        source: "qrc:/icons/home_button.png"
+                    }
+
                 }
             }
         }
     }
+
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}D{i:1}D{i:3}D{i:4}D{i:2}D{i:8}D{i:9}D{i:7}
+D{i:11}D{i:12}D{i:10}D{i:14}D{i:15}D{i:13}D{i:6}D{i:5}D{i:20}D{i:19}D{i:18}D{i:23}
+D{i:22}D{i:21}D{i:17}D{i:16}
+}
+##^##*/
