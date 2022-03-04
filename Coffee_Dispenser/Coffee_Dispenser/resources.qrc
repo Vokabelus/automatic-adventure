@@ -28,5 +28,6 @@
         <file>icons/stop_button.png</file>
         <file>icons/back_button.png</file>
         <file>icons/home_button.png</file>
+        <file>app/MyBusyIndicator.qml</file>
     </qresource>
 </RCC>

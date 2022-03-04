@@ -31,11 +31,6 @@ PageTheme {
             }
         }
 
-
-
     Component.onCompleted: bootTimer.start()
-
-
-
 
 }

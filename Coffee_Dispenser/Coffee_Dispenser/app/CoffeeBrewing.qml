@@ -60,13 +60,28 @@ PageTheme {
         width: parent.width/2
         color: "black"
 
-        BusyIndicator {
-            id: dispensingBusyIndicator
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: 281
-            height: 281
-            //color: MyStyle.accentBackground
+        Timer {
+            id: dispensingTimer
+            interval: 3000
+            running: false
+            //onTriggered: stackView.push("FinishScreen.qml")
+        }
+
+        Component.onCompleted: {
+            dispensingTimer.start()
+        }
+
+//        BusyIndicator {
+//            id: dispensingBusyIndicator
+//            anchors.verticalCenter: parent.verticalCenter
+//            anchors.horizontalCenter: parent.horizontalCenter
+//            width: 280
+//            height: 280
+//            //color: MyStyle.accentBackground
+//        }
+
+        MyBusyIndicator {
+              id: dispensingBusyIndicator
         }
 
     }
@@ -83,16 +98,17 @@ PageTheme {
             Layout.preferredWidth: parent.width
             width: parent.width
             RoundButton{
-                id:startButton
+                id:stopButton
                 Layout.preferredWidth: 250
                 Layout.preferredHeight: 60
                 radius: 60
                 onClicked: {
-                    startButtonRect.color = "red"
+                    stopButtonRect.color = "red"
+                    dispensingBusyIndicator.running = false
                     //pageStack.push("qrc:/app/CoffeeBrewing.qml")
                 }
                 Rectangle{
-                    id:startButtonRect
+                    id:stopButtonRect
                     width: parent.width
                     height: parent.height
                     radius: parent.radius
